@@ -94,3 +94,12 @@ body {
   background-color: #19d499;
   color: white;
 }
+
+
+.next_btn{
+  background-color: orangered;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  margin-top: 20px;
+}

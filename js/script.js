@@ -58,6 +58,73 @@ let questions = [
       "eXTra Multi-Program Language",
       "eXamine Multiple Language"
     ]
+
+    
+  },{
+    numb: 6,
+    question: "What does XML stand for?",
+    answer: "eXtensible Markup Language",
+    src: "./assets/image5.jpg",
+    options: [
+      "eXtensible Markup Language",
+      "eXecutable Multiple Language",
+      "eXTra Multi-Program Language",
+      "eXamine Multiple Language"
+    ]
+
+    
+  },{
+    numb: 7,
+    question: "What does XML stand for?",
+    answer: "eXtensible Markup Language",
+    src: "./assets/image5.jpg",
+    options: [
+      "eXtensible Markup Language",
+      "eXecutable Multiple Language",
+      "eXTra Multi-Program Language",
+      "eXamine Multiple Language"
+    ]
+
+    
+  },{
+    numb: 8,
+    question: "What does XML stand for?",
+    answer: "eXtensible Markup Language",
+    src: "./assets/image5.jpg",
+    options: [
+      "eXtensible Markup Language",
+      "eXecutable Multiple Language",
+      "eXTra Multi-Program Language",
+      "eXamine Multiple Language"
+    ]
+
+    
+  },{
+    numb: 9,
+    question: "What does XML stand for?",
+    answer: "eXtensible Markup Language",
+    src: "./assets/image5.jpg",
+    options: [
+      "eXtensible Markup Language",
+      "eXecutable Multiple Language",
+      "eXTra Multi-Program Language",
+      "eXamine Multiple Language"
+    ]
+
+    
+  },{
+    numb: 10,
+    question: "What does XML stand for?",
+    answer: "eXtensible Markup Language",
+    src: "./assets/image5.jpg",
+    options: [
+      "eXtensible Markup Language",
+      "eXecutable Multiple Language",
+      "eXTra Multi-Program Language",
+      "eXamine Multiple Language"
+    ]
+
+    
   }]
 
 
@@ -145,7 +212,7 @@ function showQuetions(index) {
 
 
 function showResult() {
-  alert("correct answer" + userScore)
+  window.location.href='result.html'
 }
 
 
