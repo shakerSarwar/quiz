@@ -55,11 +55,13 @@ const questions = [{
       
         
     ]
-
-
+let index = 0;
+const quesBox = document.getElementById("quesBox");
+const options = document.getElementsByClassName('ans')
 const loadQuestion = () => {
     const data = questions[index]
-    console.log(data)
+    console.log(data);
+    quesBox.innerText = `${data.question}`;
 }
 
 loadQuestion();
