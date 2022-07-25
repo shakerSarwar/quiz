@@ -143,6 +143,7 @@ body {
 @media screen and (max-width :768px)  {
   .quiz-answer {
     grid-template-columns: auto;
+    background-color: #b10d3f;
   }
 
   .indicators{
@@ -150,6 +151,17 @@ body {
    
   }
 
+  .ans{
+    grid-template-columns: auto;
+    font-size: 2rem;
+    width: 75vw;
+    text-align: center;
+  }
+
+  .ans span{
+    text-align: start;
+    width: 100%;
+  }
   .conainer img{
     padding-left: 10px;
     padding-right: 10px;
@@ -175,5 +187,24 @@ body {
   .quiz-answer{
       grid-template-columns: 1fr;
   }
+
+  .quiz{
+    display: flex;
+    flex-direction: column;
+    gap:1rem
+  }
+
+  .result{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .result img{
+   height: 370px;
+  }
+
+ 
+  
 
 }
