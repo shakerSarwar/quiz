@@ -1,4 +1,7 @@
+
+
 let questions = [
+
   {
     numb: 1,
     src: "./assets/image1.jpg",
@@ -59,8 +62,8 @@ let questions = [
       "eXamine Multiple Language"
     ]
 
-    
-  },{
+  }
+  ,{
     numb: 6,
     question: "What does XML stand for?",
     answer: "eXtensible Markup Language",
@@ -125,8 +128,13 @@ let questions = [
     ]
 
     
-  }]
+  }
 
+]
+
+const score = document.getElementById("score");
+// score.innerText = userScore;
+console.log(score)
 
 const quiz = document.querySelector(".quiz")
 const question = document.querySelector("#quesBox")
@@ -140,7 +148,11 @@ let que_numb = 1;
 let userScore = 0;
 let lockedQues = []
 
-
+// function showResult() {
+//   const score = document.getElementById("score");
+//   score.innerHTML = userScore;
+//   console.log(score)
+// }
 
 function optionSelected(answer) {
   let userAns = answer.textContent; //getting user selected option
@@ -170,6 +182,7 @@ function optionSelected(answer) {
 }
 
 
+
 function setactiveDot() {
   console.log(dotContainer)
   let list = ""
@@ -185,9 +198,12 @@ function setactiveDot() {
 
 }
 
+
 // getting questions and options from array
 function showQuetions(index) {
-  img.src = questions[index].src
+  if (img) {
+    img.src = questions[index].src
+  }
   let que_tag = `<span>${questions[index].question}</span>`;
 
 
@@ -212,7 +228,12 @@ function showQuetions(index) {
 
 
 function showResult() {
+  //const cat = localStorage.getItem('result');
   window.location.href='result.html'
+  // const score = document.getElementById("score");
+  // score.innerText = userScore;
+  // console.log(score)
+
 }
 
 
@@ -221,16 +242,22 @@ showQuetions(0)
 
 
 nextBtn.onclick = () => {
-  if (que_count < questions.length - 1) { //if question count is less than total question length
+  if (que_count < questions.length - 1) {
+    if(!lockedQues.includes(que_count)) rerurn //if question count is less than total question length
     que_count++; //increment the que_count value
     que_numb++; //increment the que_numb value
     showQuetions(que_count); //calling showQestions function       
     nextBtn.classList.remove("show"); //hide the next button
+    saveResult();
   } else {
     showResult(); //calling showResult function
   }
 }
 
+
+function saveResult() {
+  sessionStorage.setItem('result', userScore);
+}
 
 
 

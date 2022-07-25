@@ -1,11 +1,19 @@
 body {
-  padding: 10%;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 3%;
+  background-color: #b10d3f;
+}
+
+
+.quiz-page{
+  height: 90vh;
 }
 
 .dot {
   height: 25px;
   width: 25px;
-  background-color: #bbb;
+  background-color: #15050a;
   margin: 5px 12px;
   display: inline-block;
   border: 1px solid black;
@@ -29,8 +37,8 @@ body {
   margin: 0 5px 0 0;
   background-color: #fafafa;
   padding: 20px;
-  width: 500px;
-  height: 400px;
+  width: 400px;
+  height: 350px;
 }
 
 .quiz-question {
@@ -46,7 +54,7 @@ body {
   text-align: center;
   grid-template-columns: auto auto;
   grid-gap: 20px;
-  background-color: #ebfcf7;
+  background-color: #31171f;
   cursor: pointer;
 }
 
@@ -62,7 +70,7 @@ body {
 }
 
 .ans span {
-  border: 1.5px solid black;
+  border: 0.5px solid white;
   padding: 10px;
   flex: 1;
   width: 640px;
@@ -75,23 +83,24 @@ body {
 }
 
 .disabled {
-  background-color: #fafafa;
+  background-color: #01bbff;
+  color: white;
 }
 
 .active-dot {
-  background-color: greenyellow;
+  background-color: #d22b60;
 }
 
 .correct {
-  background-color: green;
+  background-color: #d22b60;
 }
 
 .incorrect {
-  background-color: red;
+  background-color: #15050a;
 }
 
 .option:active{
-  background-color: #19d499;
+  background-color: #01bbff;
   color: white;
 }
 
@@ -102,4 +111,69 @@ body {
   padding: 15px 25px;
   border: none;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+.result{
+  text-align: center;
+  position: relative;
+  height: 98vh;
+}
+
+.result img{
+  height: 500px;
+}
+
+.btn{
+  position: absolute;
+  left: 20%;
+  bottom: 20%;
+  background-color: orangered;
+  padding: 15px 25px;
+  color: white;
+  border: 0.5px #fafafa;
+  cursor: pointer;
+}
+
+.btn a{
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width :768px)  {
+  .quiz-answer {
+    grid-template-columns: auto;
+  }
+
+  .indicators{
+    padding: 10px;
+   
+  }
+
+  .conainer img{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 250px;
+    height: 150px;
+  }
+
+  .conainer{
+    flex-direction: column;
+   }
+  
+
+  .quiz-page h1{
+    display: block;
+    padding: 0 5px;
+  }
+
+  .conainer img {
+     display: block; 
+     margin: 10px;
+  }
+
+  .quiz-answer{
+      grid-template-columns: 1fr;
+  }
+
 }
